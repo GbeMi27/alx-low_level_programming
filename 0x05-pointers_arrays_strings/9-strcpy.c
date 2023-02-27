@@ -2,8 +2,8 @@
 
 /**
  * _strcpy - a function that copies the string pointed to by src
- * @dest: copy to
- * @src: copy from
+ * @dest: destination
+ * @src: source
  * Return: string
  */
 char *_strcpy(char *dest, char *src)
@@ -11,7 +11,7 @@ char *_strcpy(char *dest, char *src)
 	int len  = 0;
 
 	while (*(src + len) != '\0')
-		*(dest +len) = *(src + len);
+		*(dest + len) = *(src + len);
 	       len++;
 	}
-*(dest + len)= '\0';
+*(dest + len) = '\0';
