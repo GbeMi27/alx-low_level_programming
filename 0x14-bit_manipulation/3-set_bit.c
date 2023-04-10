@@ -1,16 +1,18 @@
 #include "main.h"
-#include "2-get_bit.c"
+
 /**
- * set_bit - sets a bit
- * @n: integer to grab 
- *
+ * set_bit - A function that sets a bit at given index to 1
+ * @n: The number to set bit in
+ * @index: The index to set bit at
+ * Return: 1 if it worked, or -1 on error
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	if (index > 32)
+	unsigned long int max = 0x01;
+
+	max <<= index;
+	if (max == 0)
 		return (-1);
-	(*n) |= 1 << index;
-	if (get_bit((*n), index) == 1)
-		return (1);
-	return (-1);
+	*n |= max;
+	return (1);
 }
