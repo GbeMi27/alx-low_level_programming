@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 /**
 * print_binary - print binary
 * @n: integer to mess with
